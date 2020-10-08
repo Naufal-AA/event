@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="Event_Management.MAsterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/superfish.js"></script>
+
+    <script src="js/jquery.equalheights.js"></script>
+
+    <script src="js/jquery.mobilemenu.js"></script>
+
+    <script src="js/tmStickUp.js"></script>
+
+    <script src="js/jquery.ui.totop.js"></script>
+
+    <script src="js/camera.js"></script>
+
+    <script src="js/owl.carousel.js"></script>
+
+    <!--[if (gt IE 9)|!(IE)]><!-->
+
+    <script src="js/jquery.mobile.customized.min.js"></script>
+
+    <!--<![endif]-->
+
+    <script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+
+  $('#camera_wrap').camera({
+    loader: false,
+    pagination: false ,
+    minHeight: '400',
+    thumbnails: false,
+    height: '38.07291666666667%',
+    caption: false,
+    navigation: true,
+    fx: 'mosaic'
+  });
+
+  $("#owl").owlCarousel({
+    items : 3, //10 items above 1000px browser width
+    itemsDesktop : [995,1], //5 items between 1000px and 901px
+    itemsDesktopSmall : [767, 1], // betweem 900px and 601px
+    itemsTablet: [700, 1], //2 items between 600 and 0
+    itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+    navigation : true,
+    pagination :  false
+  }); 
+ });
+    </script>
+
+    <!--[if lt IE 8]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+</div>
+<![endif]-->
+    <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body class="page1" id="top">
+    <!--==============================
+              header
+=================================-->
+    <header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1 class="logo">
+          EVENT MANAGEMENT
+          <span>WELCOME</span>
+      </h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container_12">
+        <div class="grid_12">          
+          <div class="navigation">
+            <nav>
+              <ul class="sf-menu">
+                <li><a href="home.aspx">Home</a></li>
+                <li><a href="admin.aspx">Admin</a></li>
+                <li><a href="register.aspx">Register</a></li>
+                <li><a href="login.aspx">Login</a></li>
+                <li><a href="about.aspx">About</a></li> 
+                <li><a href="contact.aspx">Contact</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>       
+         <div class="clear"></div>  
+     </div> 
+     <div class="clear"></div>
+    </div> 
+  </section>
+</header>
+    <section class="slider_wrapper">
+  <div id="camera_wrap" class="">
+    <div data-src="images/Master2.jpg"></div>
+    <div data-src="images/Master3.png"></div>
+    <div data-src="images/Master1.jpg"></div>
+  </div>  
+</section>
+    <form runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </form>
+    <!--==============================
+              footer
+=================================-->
+    <footer id="footer">
+  <div class="container_12">
+    <div class="grid_12"> 
+      <h1 class="logo">
+          EVENT MANAGEMENT
+      </h1>
+      <div class="socials">
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-google-plus"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+      </div>
+      <div class="sub-copy">&copy; <span id="Span1"></span>| <a href="#">Privacy Policy</a> <br> 
+          Website Designed and Powered by<br />
+                <br />
+                <strong>Team</strong>&nbsp;
+                <asp:Image ID="Image1" runat="server" Height="20px" Width="25px" 
+                    ImageUrl="~/images/beta.jpg" ImageAlign="AbsMiddle" />&nbsp;
+                <span class="style7" 
+                    
+                    style="line-height: 115%; font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; sans-serif: ;">
+                β</span><span class="style7" 
+                    style="line-height: 115%; font-family: Broadway; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">eta</span></span><p 
+                    class="MsoNormal">
+                    <span style="font-family:&quot;Eras Bold ITC&quot;,&quot;sans-serif&quot;">Govt. 
+                    College Kasaragod<o:p></o:p></span></p></div>
+    </div>
+    <div class="clear"></div>
+    </div>
+    </footer>
+    <div class="clear">
+    </div>
+</body>
+</html>

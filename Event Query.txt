@@ -1,0 +1,153 @@
+CREATE TABLE [dbo].[Video] (
+    [Id]       INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode] NVARCHAR (50)  NOT NULL,
+    [CamType]  NVARCHAR (50)  NULL,
+    [Duration] NVARCHAR (50)  NULL,
+    [Price]    NVARCHAR (50)  NULL,
+    [Image]    NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Video] PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+CREATE TABLE [dbo].[Travel] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode]    NVARCHAR (50)  NOT NULL,
+    [Vehicle]     NVARCHAR (50)  NULL,
+    [Name]        NVARCHAR (50)  NULL,
+    [Bustype]     NVARCHAR (50)  NULL,
+    [Noofseats]   NVARCHAR (50)  NULL,
+    [Duration]    NVARCHAR (50)  NULL,
+    [Price]       NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (50)  NULL,
+    [Image]       NVARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+CREATE TABLE [dbo].[Stills] (
+    [Id]       INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode] NVARCHAR (50)  NOT NULL,
+    [CamType]  NVARCHAR (50)  NULL,
+    [Duration] NVARCHAR (50)  NULL,
+    [Price]    NVARCHAR (50)  NULL,
+    [Image]    NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Table] PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+CREATE TABLE [dbo].[Stage] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode]    NVARCHAR (50)  NOT NULL,
+    [SqFeet]      NVARCHAR (50)  NULL,
+    [Price]       NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (50)  NULL,
+    [Image]       NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Stage] PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+CREATE TABLE [dbo].[Register] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [FirstName]   NVARCHAR (50) NULL,
+    [LastName]    NVARCHAR (50) NULL,
+    [Address]     NVARCHAR (50) NULL,
+    [State]       NVARCHAR (50) NULL,
+    [District]    NVARCHAR (50) NULL,
+    [DateOfBirth] NVARCHAR (50) NULL,
+    [Gender]      NVARCHAR (50) NULL,
+    [Email]       NVARCHAR (50) NULL,
+    [Mobile]      NUMERIC (18)  NULL,
+    [Password]    NVARCHAR (50) NULL
+);
+
+CREATE TABLE [dbo].[payment] (
+    [Id]            INT           IDENTITY (1, 1) NOT NULL,
+    [name]          NVARCHAR (50) NULL,
+    [address]       NVARCHAR (50) NULL,
+    [mobile]        NUMERIC (18)  NULL,
+    [email]         NVARCHAR (50) NULL,
+    [date]          NVARCHAR (50) NULL,
+    [card]          NVARCHAR (50) NULL,
+    [cardnum]       NVARCHAR (50) NULL,
+    [nameonthecard] NVARCHAR (50) NULL,
+    [expirydate]    NVARCHAR (50) NULL,
+    [cvv]           NVARCHAR (50) NULL,
+    [video]         NVARCHAR (50) NULL,
+    [code1]         NVARCHAR (50) NULL,
+    [price1]        NVARCHAR (50) NULL,
+    [stills]        NVARCHAR (50) NULL,
+    [code2]         NVARCHAR (50) NULL,
+    [price2]        NVARCHAR (50) NULL,
+    [decoration]    NVARCHAR (50) NULL,
+    [code3]         NVARCHAR (50) NULL,
+    [price3]        NVARCHAR (50) NULL,
+    [Costumes]      NVARCHAR (50) NULL,
+    [code4]         NVARCHAR (50) NULL,
+    [price4]        NVARCHAR (50) NULL,
+    [travels]       NVARCHAR (50) NULL,
+    [code5]         NVARCHAR (50) NULL,
+    [price5]        NVARCHAR (50) NULL,
+    [food]          NVARCHAR (50) NULL,
+    [code6]         NVARCHAR (50) NULL,
+    [price6]        NVARCHAR (50) NULL,
+    [stage]         NVARCHAR (50) NULL,
+    [code7]         NVARCHAR (50) NULL,
+    [price7]        NVARCHAR (50) NULL,
+    [total]         NVARCHAR (50) NULL,
+    [purpose]       NVARCHAR (50) NULL,
+    [deliverydate]  NVARCHAR (50) NULL,
+    [deliverytime]  NVARCHAR (50) NULL
+);
+
+
+CREATE TABLE [dbo].[Food] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode]    NVARCHAR (50)  NOT NULL,
+    [Name]        NVARCHAR (50)  NULL,
+    [Price]       NVARCHAR (50)  NULL,
+    [Receipe]     NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (50)  NULL,
+    [Image]       NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Food] PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+
+CREATE TABLE [dbo].[Feedback] (
+    [Id]      INT            IDENTITY (1, 1) NOT NULL,
+    [Name]    NVARCHAR (50)  NULL,
+    [Email]   NVARCHAR (50)  NULL,
+    [Message] NVARCHAR (MAX) NULL
+);
+
+CREATE TABLE [dbo].[Decoration] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [Itemcode]    NVARCHAR (50)  NOT NULL,
+    [Pandaltype]  NVARCHAR (50)  NULL,
+    [sqfeet]      NVARCHAR (50)  NULL,
+    [Noofchair]   NVARCHAR (50)  NULL,
+    [Price]       NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (50)  NULL,
+    [Nooffans]    NVARCHAR (50)  NULL,
+    [Nooflights]  NVARCHAR (50)  NULL,
+    [Image]       NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Decoration] PRIMARY KEY CLUSTERED ([Itemcode] ASC)
+);
+
+
+CREATE TABLE [dbo].[Costume] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [ItemCode]    NVARCHAR (50)  NOT NULL,
+    [Category]    NVARCHAR (50)  NULL,
+    [Type]        NVARCHAR (50)  NULL,
+    [Price]       NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (50)  NULL,
+    [Designer]    NVARCHAR (50)  NULL,
+    [Image]       NVARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([ItemCode] ASC)
+);
+
+
+CREATE TABLE [dbo].[adminlogin] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) NULL,
+    [Password] NVARCHAR (50) NULL,
+    [Email]    NVARCHAR (50) NULL,
+    [Mobile]   NUMERIC (18)  NULL,
+    CONSTRAINT [PK_adminlogin] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
